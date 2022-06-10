@@ -7,7 +7,7 @@ body {
   background: linear-gradient(-45deg,#ffefba, #ffffff);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 70vh;
+	height: 90vh;
 }
 
 /* Header css */
