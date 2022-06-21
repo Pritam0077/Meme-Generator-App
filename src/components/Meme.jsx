@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { saveAs } from 'file-saver'
 export default function Meme() {
   const [meme, setMeme] = useState({
     topText: "",
@@ -31,6 +31,16 @@ export default function Meme() {
     }));
   }
 
+  function downloadImage() {
+    const randomNumber = Math.floor(Math.random() * allMemes.length);
+    let saveurl=allMemes[randomNumber].url;
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      randomImage: saveurl,
+    }));
+    saveAs(saveurl, 'image.jpg'); 
+  }
+
   return (
     <div>
       <div className="form">
@@ -50,9 +60,10 @@ export default function Meme() {
           value={meme.bottomText}
           onChange={handleChange}
         />
-        <button className="form--button" onClick={getmemeimage}>
+        <button className="form--button" onClick={getmemeimage}  >
           Get a new meme image 🖼
         </button>
+        <button type="button " class="btn btn downloadbutton" onClick={downloadImage}>Download-Random meme </button>
       </div>
       <div className="meme">
         <img src={meme.randomImage} className="meme--image" alt="meme" />
