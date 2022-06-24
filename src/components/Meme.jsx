@@ -60,10 +60,12 @@ export default function Meme() {
           value={meme.bottomText}
           onChange={handleChange}
         />
+        <div className="centerbuttons">
         <button className="form--button" onClick={getmemeimage}  >
           Get a new meme image 🖼
         </button>
         <button type="button " class="btn btn downloadbutton" onClick={downloadImage}>Download-Random meme </button>
+        </div>
       </div>
       <div className="meme">
         <img src={meme.randomImage} className="meme--image" alt="meme" />
