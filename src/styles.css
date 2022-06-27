@@ -4,17 +4,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(-45deg,#ffefba, #ffffff);
+  background: white;
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 90vh;
   overflow-x: hidden;
 }
 
-/* Header css */
-.header {
-    border-bottom: 1px solid #E2E8F0;
-}
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -34,15 +31,17 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
 }
 
 .header--image {
   height: 45px;
-  margin-right: 6px;
+  margin-left: -19px;
+  padding: 0px 4px;
 }
 .header--title {
-  font-size: 1.25rem;
-  margin-right: auto;
+font-size: 1.25rem;
+ margin-right: auto;
 }
 
 /* form css */
@@ -60,7 +59,10 @@ body {
   border: 1px solid #d5d4d8;
   text-indent: 5px;
 }
-
+.form--input:focus{
+  outline: 4px solid #3f78fd;
+  outline-offset: 0;
+}
 .form--button {
   grid-column: 1 / -1;
   border-radius: 5px;
@@ -80,9 +82,10 @@ body {
 
   border: none;
   cursor: pointer;
-  width: 70%;
+  width: 40%;
   margin: auto;
-  height: 90%;
+  height: 150%;
+  word-spacing: 0px;
 }
 
 .meme {
@@ -149,6 +152,16 @@ body {
     margin: auto;
     height: 90%;
   }
+  .downloadbutton{
+    width: 50%;
+    margin: auto;
+    height: 90%;
+  }
+  .form-switch{
+    display: block;
+    margin: auto;
+    
+  }
 }
 /* 385px */
 @media only screen and (max-width:1599px) {
@@ -180,4 +193,73 @@ body {
    .meme--image{
      margin-top: 12px;
    }
+   .downloadbutton{
+    margin-top: 15px;
+   }
 }
+.downloadbutton{
+  grid-column: 1 / -1;
+  border-radius: 5px;
+  color: white;
+  font-family: "Karla", sans-serif;
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+   ); /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  margin: auto;
+  height: 150%;
+}
+.downloadbutton:hover{
+  color: white;
+}
+.centerbuttons{
+  display: flex;
+  width: 100%;
+  padding: 0px 12px;
+}
+
+.form--button:hover{
+  background: #687ff5;
+  box-shadow: 0 5px 15px rgb(0, 56, 240);
+}
+
+.downloadbutton:hover{
+  background: #45ed50;
+  /* background: rgba(255, 255, 255, 1); */
+  box-shadow: 0 5px 15px rgba(0, 255, 38, 0.668);
+}
+
+/* for specfic devices  */
+@media screen and (width: 540px), 
+       screen and (height: 720px) {
+        .downloadbutton{
+          width: 100%;
+          height: 430%;
+          margin-left: 12px;
+        }
+        .form--button{
+          width: 100%;
+          height: 430%;
+        }
+        .centerbuttons{
+          margin-bottom: 23px;
+        }
+      }
+
+@media screen and (width: 768px), 
+      screen and (height: 1024px) {
+        .downloadbutton{
+          height: 183%;
+        }
+      }
