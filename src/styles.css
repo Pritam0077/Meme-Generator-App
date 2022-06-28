@@ -73,12 +73,12 @@ font-size: 1.25rem;
     to right,
     #240b36,
     #c31432
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  );
   background: linear-gradient(
     to right,
     #240b36,
     #c31432
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 
   border: none;
   cursor: pointer;
@@ -164,12 +164,12 @@ font-size: 1.25rem;
   }
 }
 /* 385px */
-@media only screen and (max-width:1599px) {
+/* @media only screen and (max-width:1599px) {
   body{
     overflow-y: hidden;
   }
   
-}
+} */
 
 
 @media only screen and (max-width:280px ) {
@@ -207,12 +207,12 @@ font-size: 1.25rem;
     to right,
     #240b36,
     #c31432
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #240b36,
     #c31432
-   ); /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   );
 
   border: none;
   cursor: pointer;
