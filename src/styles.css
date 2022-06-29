@@ -47,7 +47,7 @@ font-size: 1.25rem;
 /* form css */
 
 .form {
-  padding: 36px;
+  padding: 5px;
   display: grid;
   grid-template: 40px 40px / 1fr 1fr;
   gap: 17px;
@@ -81,8 +81,9 @@ font-size: 1.25rem;
   ); 
 
   border: none;
+  padding: 10%;
   cursor: pointer;
-  width: 40%;
+  width: 95%;
   margin: auto;
   height: 150%;
   word-spacing: 0px;
@@ -224,10 +225,18 @@ font-size: 1.25rem;
   color: white;
 }
 .centerbuttons{
+  border: none;
   display: flex;
-  width: 100%;
-  padding: 0px 12px;
+  padding: 25px 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+
 }
+/* .buttons{
+  width: 100%;
+} */
 
 .form--button:hover{
   background: #687ff5;
