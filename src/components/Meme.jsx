@@ -44,34 +44,51 @@ export default function Meme() {
   return (
     <div>
       <div className="form">
-        <input
-          className="form--input"
-          type="text"
-          placeholder="shut up"
-          name="topText"
-          value={meme.topText}
-          onChange={handleChange}
-        />
-        <input
-          className="form--input"
-          type="text"
-          placeholder="and take my money"
-          name="bottomText"
-          value={meme.bottomText}
-          onChange={handleChange}
-        />
-        <div className="centerbuttons">
-        <button className="form--button" onClick={getmemeimage}  >
-          Get a new meme image 🖼
-        </button>
-        <button type="button " class="btn btn downloadbutton" onClick={downloadImage}>Download-Random meme </button>
+        <div>
+          <input
+            className="form--input"
+            type="text"
+            size="70"
+            placeholder="shut up"
+            name="topText"
+            value={meme.topText}
+            onChange={handleChange}
+          />
+
         </div>
+        
+        <div>
+          <input
+            className="form--input"
+            type="text"
+            size="70"
+            placeholder="and take my money"
+            name="bottomText"
+            value={meme.bottomText}
+            onChange={handleChange}
+          />
+        </div>
+        
       </div>
+        <div className="centerbuttons">
+          <div className="buttons">
+            <button className="form--button" onClick={getmemeimage}  >
+              Get a new meme image 🖼
+            </button>
+          </div>
+         
+        <div className="buttons">
+            <button type="button " className="form--button" onClick={downloadImage}>Download-Random meme </button>
+          </div>
+          
+        </div>
+
       <div className="meme">
         <img src={meme.randomImage} className="meme--image" alt="meme" />
         <h2 className="meme--text top">{meme.topText}</h2>
         <h2 className="meme--text bottom">{meme.bottomText}</h2>
       </div>
     </div>
+
   );
 }
