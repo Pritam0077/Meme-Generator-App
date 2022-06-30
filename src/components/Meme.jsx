@@ -44,22 +44,31 @@ export default function Meme() {
   return (
     <div>
       <div className="form">
-        <input
-          className="form--input"
-          type="text"
-          placeholder="shut up"
-          name="topText"
-          value={meme.topText}
-          onChange={handleChange}
-        />
-        <input
-          className="form--input"
-          type="text"
-          placeholder="and take my money"
-          name="bottomText"
-          value={meme.bottomText}
-          onChange={handleChange}
-        />
+        <div>
+          <input
+            className="form--input"
+            type="text"
+            size="70"
+            placeholder="shut up"
+            name="topText"
+            value={meme.topText}
+            onChange={handleChange}
+          />
+
+        </div>
+        
+        <div>
+          <input
+            className="form--input"
+            type="text"
+            size="70"
+            placeholder="and take my money"
+            name="bottomText"
+            value={meme.bottomText}
+            onChange={handleChange}
+          />
+        </div>
+        
       </div>
         <div className="centerbuttons">
           <div className="buttons">

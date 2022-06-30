@@ -47,10 +47,17 @@ font-size: 1.25rem;
 /* form css */
 
 .form {
-  padding: 5px;
-  display: grid;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
   grid-template: 40px 40px / 1fr 1fr;
-  gap: 17px;
+  gap: 40px;
+  border:none;
+  justify-content: center;
+
+
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 .form--input {
@@ -225,12 +232,12 @@ font-size: 1.25rem;
   color: white;
 }
 .centerbuttons{
-  border: none;
+  
   display: flex;
   padding: 25px 12px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 
 
 }
