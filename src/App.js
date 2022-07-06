@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Header from "./components/Header";
 import Meme from "./components/Meme";
+import Footer from "./components/Footer";
 
 function App() {
   const [mode , setMode]=useState("light");
@@ -20,6 +21,7 @@ function App() {
     <div>
     <Header title="TextUtils" mode={mode} toogleMode={toogleMode}/>
     <Meme />
+    <Footer />
     </div>
   );
 }
