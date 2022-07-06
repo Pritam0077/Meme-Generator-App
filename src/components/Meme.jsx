@@ -5,6 +5,7 @@ export default function Meme() {
     topText: "",
     bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg",
+    name : "meme"
   });
 
   function handleChange(event) {
@@ -22,12 +23,14 @@ export default function Meme() {
       .then((data) => setAllMemes(data.data.memes));
   }, []);
 
-  function getmemeimage() {
+  function getMemeImage() {
     const randomNumber = Math.floor(Math.random() * allMemes.length);
     const url = allMemes[randomNumber].url;
+    const name = allMemes[randomNumber].name;
     setMeme((prevMeme) => ({
       ...prevMeme,
       randomImage: url,
+      name : name
     }));
   }
 
@@ -38,7 +41,28 @@ export default function Meme() {
       ...prevMeme,
       randomImage: saveurl,
     }));
-    saveAs(saveurl, 'image.jpg'); 
+    saveMeme();
+  }
+
+  function saveMeme() {
+    const canvas = document.createElement("canvas");
+    const img = new Image();
+    img.src = meme.randomImage;
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const context = canvas.getContext("2d");
+      context.drawImage(img, 0, 0);
+      context.fillStyle = "white";
+      context.font = "30px sans-serif";
+      context.textAlign = "center";
+      context.fillText(meme.topText, canvas.width/2, 40);
+      context.fillText(meme.bottomText, canvas.width/2, canvas.height - 20);
+
+      const fileName = meme.name+".png";
+      saveAs(canvas.toDataURL("image/png"), fileName);
+    }
   }
 
   return (
@@ -72,7 +96,7 @@ export default function Meme() {
       </div>
         <div className="centerbuttons">
           <div className="buttons">
-            <button className="form--button" onClick={getmemeimage}  >
+            <button className="form--button" onClick={getMemeImage}  >
               Get a new meme image 🖼
             </button>
           </div>
