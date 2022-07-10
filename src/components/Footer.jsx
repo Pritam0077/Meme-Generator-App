@@ -4,7 +4,7 @@ import { FaTwitter, FaDiscord, FaGithub } from "react-icons/fa";
 function Footer() {
   return (
     <div>
-      <div class="footer-basic">
+      <div class="footer-basic" id="bg">
         <footer>
           <div class="social">
             <a href="https://twitter.com/Pritam_0077" target="blank">
@@ -21,7 +21,7 @@ function Footer() {
           <p class="copyright">Follow and give a 🌟if you liked it</p>
         </footer>
       </div>
-    </div>
+     </div>
   );
 }
 
