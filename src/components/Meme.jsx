@@ -102,7 +102,7 @@ export default function Meme() {
           </div>
          
         <div className="buttons">
-            <button type="button " className="form--button" onClick={downloadImage}>Download-Random meme </button>
+            <button type="button " className="form--button" onClick={downloadImage}>Download-Created meme </button>
           </div>
           
         </div>
