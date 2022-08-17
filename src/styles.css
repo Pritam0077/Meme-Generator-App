@@ -91,7 +91,7 @@ body {
   gap: 1rem;
 }
 
-.meme--grid-item {
+.meme--grid-item-container {
   background-color: #ffffff;
   color: white;
   padding: 0.4rem;
@@ -101,13 +101,13 @@ body {
   border: 1px solid #ccc;
 }
 
-.meme--grid-item:hover {
+.meme--grid-item-container:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2); 
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.meme--grid-item img {
+.meme--grid-item-container img {
   object-fit: cover;
   object-position: center;
   height: 100%;
@@ -115,6 +115,24 @@ body {
   border-radius: 5px;
 }
 
+.meme--grid-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.meme--grid-item--text{
+  color: #000;
+  font-family: impact, sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000,
+    1px 1px 5px #000;
+}
 @media (min-width: 600px) {
   .meme--grid { grid-template-columns: repeat(2, 1fr); }
 }

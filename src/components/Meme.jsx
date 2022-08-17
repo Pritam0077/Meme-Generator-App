@@ -38,8 +38,8 @@ export default function Meme() {
 
   // selecting particular meme
   const [selectedMeme, setselectedMeme] = useState({
-    topText: "",
-    bottomText: "",
+    // topText: "",
+    // bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg",
     name: "meme",
   });
@@ -54,11 +54,15 @@ export default function Meme() {
     setShowMemeGrid(false);
   };
 
-  // handles text change on selected meme
+  // handles text
+  const [text, setText] = useState({
+    topText: "",
+    bottomText: "",
+  });
   function handleChange(event) {
     const { name, value } = event.target;
-    setselectedMeme((prevMeme) => ({
-      ...prevMeme,
+    setText((prevText) => ({
+      ...prevText,
       [name]: value,
     }));
   }
@@ -143,7 +147,11 @@ export default function Meme() {
         </div>
       </div>
       {showMemeGrid ? (
-        <MemeGrid memes={memes} handleSelectMeme={handleSelectMeme} />
+        <MemeGrid
+          memes={memes}
+          handleSelectMeme={handleSelectMeme}
+          text={text}
+        />
       ) : (
         <div className="meme">
           <img
@@ -151,8 +159,8 @@ export default function Meme() {
             className="meme--image"
             alt="meme"
           />
-          <h2 className="meme--text top">{selectedMeme.topText}</h2>
-          <h2 className="meme--text bottom">{selectedMeme.bottomText}</h2>
+          <h2 className="meme--text top">{text.topText}</h2>
+          <h2 className="meme--text bottom">{text.bottomText}</h2>
         </div>
       )}
     </div>
