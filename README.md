@@ -13,6 +13,10 @@
 - You can add text on the top and the bottom of the image.
 - The App is also available in a Dark Theme and Responsive Design for Mobile Devices.
 
+## Screenshot
+
+<img width="944" alt="image" src="https://user-images.githubusercontent.com/89348093/185145454-72eff230-bc81-4514-a33b-2f0908695a99.png">
+
 > Want to contribute? Check out our [Contributing Guidelines](https://github.com/Pritam0077/Meme-Generator-App/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/Pritam0077/Meme-Generator-App/blob/main/CODE_OF_CONDUCT.md).
   
 ### If you like the project, make sure to Star the Repo ⭐ and follow ✌️
