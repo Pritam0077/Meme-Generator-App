@@ -84,6 +84,45 @@ body {
   word-spacing: 0px;
 }
 
+.meme--grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.meme--grid-item {
+  background-color: #ffffff;
+  color: white;
+  padding: 0.4rem;
+  height: 15rem;
+  transition: all .3s ease-in-out;
+  border-radius:10px;
+  border: 1px solid #ccc;
+}
+
+.meme--grid-item:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.meme--grid-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  .meme--grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .meme--grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 .meme {
   position: relative;
 }
@@ -290,4 +329,5 @@ body {
   color:#aaa;
   margin-bottom:0;
 }
+
 
