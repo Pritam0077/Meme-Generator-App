@@ -6,6 +6,16 @@
 
 > Try the live version right now-> [meme-generatorapp.netlify.app](https://meme-generatorapp.netlify.app)
 
+## How to start
+1. After cloning or downloading the zip file
+2. Go to the **Meme-Generator-App folder**
+3. Open your terminal here in this directory
+4. Type the following Command
+    a) **npm install**
+    b) **npm start**
+
+**Wowzaa the project is working on your local host_**
+
 ## Features
 
 - Generate memes with custom text.
@@ -18,5 +28,11 @@
 <img width="944" alt="image" src="https://user-images.githubusercontent.com/89348093/185145454-72eff230-bc81-4514-a33b-2f0908695a99.png">
 
 > Want to contribute? Check out our [Contributing Guidelines](https://github.com/Pritam0077/Meme-Generator-App/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/Pritam0077/Meme-Generator-App/blob/main/CODE_OF_CONDUCT.md).
+
+## Tech Used
+![Star](https://img.shields.io/badge/react%20-0088CC?style=for-the-badge&logo=reactos&logoColor=white)
+![](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
   
 ### If you like the project, make sure to Star the Repo ⭐ and follow ✌️
