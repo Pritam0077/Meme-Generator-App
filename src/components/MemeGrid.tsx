@@ -1,6 +1,12 @@
-import React from "react";
+import { IMemeObjectTypes, IMemeTextTypes } from "./types";
 
-function MemeGrid({ memes, handleSelectMeme, text }) {
+type TMemeGridProps = {
+  memes: IMemeObjectTypes[];
+  text: IMemeTextTypes;
+  handleSelectMeme: (meme: IMemeObjectTypes) => void;
+};
+
+const MemeGrid = ({ memes, handleSelectMeme, text }: TMemeGridProps) => {
   return (
     <div className="meme--grid">
       {memes.map((meme) => (
@@ -27,6 +33,6 @@ function MemeGrid({ memes, handleSelectMeme, text }) {
       ))}
     </div>
   );
-}
+};
 
 export default MemeGrid;

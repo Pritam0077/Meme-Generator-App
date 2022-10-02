@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { saveAs } from "file-saver";
 import MemeGrid from "./MemeGrid";
+import { IMemeObjectTypes, IMemeTextTypes, ISelectedMemeTypes } from "./types";
 
 const MEMES_GRID_LENGTH = 12;
 
-export default function Meme() {
+const Memes = () => {
   // this fetches all the memes from api
-  const [allMemes, setAllMemes] = useState([]);
+  const [allMemes, setAllMemes] = useState<IMemeObjectTypes[]>([]);
   useEffect(() => {
     fetch("https://api.imgflip.com/get_memes")
       .then((res) => res.json())
@@ -16,7 +17,7 @@ export default function Meme() {
   }, []);
 
   // getting random memes from all memes and showing it on webpage meme grid
-  const [memes, setMemes] = useState([]);
+  const [memes, setMemes] = useState<IMemeObjectTypes[]>([]);
   const [showMemeGrid, setShowMemeGrid] = useState(false);
   function getMemeImages() {
     // copied algo from https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array
@@ -37,14 +38,14 @@ export default function Meme() {
   }
 
   // selecting particular meme
-  const [selectedMeme, setselectedMeme] = useState({
+  const [selectedMeme, setselectedMeme] = useState<ISelectedMemeTypes>({
     // topText: "",
     // bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg",
     name: "meme",
   });
 
-  const handleSelectMeme = (meme) => {
+  const handleSelectMeme = (meme: IMemeObjectTypes) => {
     setselectedMeme((prevMeme) => ({
       ...prevMeme,
       randomImage: meme.url,
@@ -55,11 +56,12 @@ export default function Meme() {
   };
 
   // handles text
-  const [text, setText] = useState({
+  const [text, setText] = useState<IMemeTextTypes>({
     topText: "",
     bottomText: "",
   });
-  function handleChange(event) {
+
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
     setText((prevText) => ({
       ...prevText,
@@ -86,13 +88,13 @@ export default function Meme() {
       canvas.width = img.width;
       canvas.height = img.height;
       const context = canvas.getContext("2d");
-      context.drawImage(img, 0, 0);
-      context.fillStyle = "white";
-      context.font = "30px sans-serif";
-      context.textAlign = "center";
-      context.fillText(selectedMeme.topText, canvas.width / 2, 40);
-      context.fillText(
-        selectedMeme.bottomText,
+      context!.drawImage(img, 0, 0);
+      context!.fillStyle = "white";
+      context!.font = "30px sans-serif";
+      context!.textAlign = "center";
+      context!.fillText(selectedMeme.topText!, canvas.width / 2, 40);
+      context!.fillText(
+        selectedMeme.bottomText!,
         canvas.width / 2,
         canvas.height - 20
       );
@@ -109,7 +111,7 @@ export default function Meme() {
           <input
             className="form--input"
             type="text"
-            size="70"
+            size={70}
             placeholder="shut up"
             name="topText"
             value={selectedMeme.topText}
@@ -121,7 +123,7 @@ export default function Meme() {
           <input
             className="form--input"
             type="text"
-            size="70"
+            size={70}
             placeholder="and take my money"
             name="bottomText"
             value={selectedMeme.bottomText}
@@ -138,7 +140,7 @@ export default function Meme() {
 
         <div className="buttons">
           <button
-            type="button "
+            type="button"
             className="form--button"
             onClick={downloadImage}
           >
@@ -165,4 +167,6 @@ export default function Meme() {
       )}
     </div>
   );
-}
+};
+
+export default Memes;
