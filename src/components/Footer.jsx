@@ -17,7 +17,7 @@ function Footer() {
               <FaGithub />
             </a>
           </div>
-          <p class="copyright">Made with 💓 by Pritam Panda © 2022</p>
+          <p class="copyright">Made with 💓 © 2022</p>
           <p class="copyright">Follow and give a 🌟if you liked it</p>
         </footer>
       </div>
