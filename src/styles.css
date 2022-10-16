@@ -16,7 +16,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: linear-gradient(to right, #240b36, #c31432);
+/*   background: linear-gradient(to right, #240b36, #c31432); */
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(0,0,0,0.7235936610972514) 100%);
   width: 100%;
 }
 .header--title {
