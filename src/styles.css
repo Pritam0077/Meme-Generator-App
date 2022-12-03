@@ -1,3 +1,6 @@
+.app-container{
+  /* position: fixed */
+}
 body {
   margin: 0;
   font-family: "Karla", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -16,17 +19,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-/*   background: linear-gradient(to right, #240b36, #c31432); */
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(111,5,134,0.9336776947106968) 96%);
+  background: linear-gradient(to right, #240b36, #c31432);
   width: 100%;
+  
 }
 .header--title {
-  background: -webkit-linear-gradient(
-    to right,
-    #78ffd6,
-    #a8ff78
-  );
+  background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
   background: linear-gradient(to right, #78ffd6, #a8ff78);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,6 +35,7 @@ body {
   height: 45px;
   margin-left: -19px;
   padding: 0px 4px;
+  margin-right: 10px;
 }
 .header--title {
   font-size: 1.25rem;
@@ -45,8 +44,12 @@ body {
 
 /* form css */
 
+.form-container{
+  margin-top: 100px;
+}
+
 .form {
-  margin-top: 10px;
+  /* margin-top: 100px; */
   padding: 10px;
   display: flex;
   grid-template: 40px 40px / 1fr 1fr;
@@ -98,13 +101,13 @@ body {
   color: white;
   padding: 0.4rem;
   height: 15rem;
-  transition: all .3s ease-in-out;
-  border-radius:10px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
   border: 1px solid #ccc;
 }
 
 .meme--grid-item-container:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -117,14 +120,14 @@ body {
   border-radius: 5px;
 }
 
-.meme--grid-item{
+.meme--grid-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.meme--grid-item--text{
+.meme--grid-item--text {
   color: #000;
   font-family: impact, sans-serif;
   font-size: 1.5em;
@@ -136,11 +139,15 @@ body {
     1px 1px 5px #000;
 }
 @media (min-width: 600px) {
-  .meme--grid { grid-template-columns: repeat(2, 1fr); }
+  .meme--grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 900px) {
-  .meme--grid { grid-template-columns: repeat(3, 1fr); }
+  .meme--grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .meme {
@@ -313,41 +320,16 @@ body {
 }
 
 /* Footer styles */
-.footer-basic {
-  padding:30px 0;
-  background-color:#ffffff;
-  color:#4b4c4d;
+.icon-size {
+  height: 45px;
+  width: 45px;
 }
 
-.footer-basic .social {
-  text-align:center;
-  padding-bottom:15px;
+.modeStyle {
+  color: #e825ca;
 }
 
-.footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
+.footer-bottom {
+  padding-bottom: 10px;
 }
-
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
-
-.footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:20px;
-  color:#aaa;
-  margin-bottom:0;
-}
-
 

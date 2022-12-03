@@ -103,7 +103,8 @@ export default function Meme() {
   }
 
   return (
-    <div>
+    <>
+    <div className="form-container">
       <div className="form">
         <div>
           <input
@@ -164,5 +165,6 @@ export default function Meme() {
         </div>
       )}
     </div>
+    </>
   );
 }
