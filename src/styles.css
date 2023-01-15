@@ -63,6 +63,7 @@ body {
   border-radius: 5px;
   border: 1px solid #d5d4d8;
   text-indent: 5px;
+  width: 100%;
 }
 .form--input:focus {
   outline: 4px solid #3f78fd;
@@ -88,7 +89,7 @@ body {
 
 .meme--grid {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0px 12px ;
   display: grid;
   gap: 1rem;
 }
@@ -98,6 +99,7 @@ body {
   color: white;
   padding: 0.4rem;
   height: 15rem;
+  margin: 0px 0px 0px 0px;
   transition: all .3s ease-in-out;
   border-radius:10px;
   border: 1px solid #ccc;
@@ -195,15 +197,11 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .form--input {
-    width: 70%;
-    margin: auto;
-  }
   .meme--image {
     margin-top: 12px;
   }
   .form--button {
-    width: 50%;
+    width: 85%;
     margin: auto;
     height: 90%;
   }
@@ -237,8 +235,7 @@ body {
     flex-direction: column;
   }
   .form--input {
-    width: 70%;
-    margin: auto;
+    width: 100%;
   }
   .form--button {
     margin-top: 15px;
