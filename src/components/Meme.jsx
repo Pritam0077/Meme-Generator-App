@@ -132,7 +132,7 @@ export default function Meme() {
       <div className="centerbuttons">
         <div className="buttons">
           <button className="form--button" onClick={getMemeImages}>
-            Get new meme images 🖼
+            Get New Meme Images 🖼
           </button>
         </div>
 
@@ -142,7 +142,7 @@ export default function Meme() {
             className="form--button"
             onClick={downloadImage}
           >
-            Download-Created meme{" "}
+            Download-Created Meme{" "}
           </button>
         </div>
       </div>
